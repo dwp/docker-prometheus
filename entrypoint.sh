@@ -46,11 +46,11 @@ else
 fi
 
 echo "INFO: Copying prometheus configuration file(s) from ${S3_URI} to /etc/prometheus..."
-aws ${PROFILE_OPTION} s3 cp ${S3_URI}/prometheus-${PROMETHEUS_ROLE}.yml /etc/prometheus/prometheus.yml
+aws ${PROFILE_OPTION} s3 sync ${S3_URI}/ /etc/prometheus/
 
 echo "INFO: Starting prometheus..."
 exec /bin/prometheus \
-  --config.file=/etc/prometheus/prometheus.yml \
+  --config.file=/etc/prometheus/prometheus-${PROMETHEUS_ROLE}.yml \
   --storage.tsdb.path=/prometheus \
   --web.console.libraries=/usr/share/prometheus/console_libraries \
   --web.console.templates=/usr/share/prometheus/consoles \
