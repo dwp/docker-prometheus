@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-ALPINE312-OPENSSL-1050745:
+    - '*':
+        reason: introduced by base image, cannot be fixed
+        expires: 2021-12-11T00:00:00.000Z

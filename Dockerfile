@@ -6,8 +6,6 @@ ARG PROMETHEUS_VERSION=2.23.0
 RUN apk add --update --no-cache \
     curl \
     aws-cli
-RUN apk add --update --no-cache \
-    libcrypto1.1>=1.1.1i-r0
 
 COPY entrypoint.sh /bin/entrypoint.sh
 
