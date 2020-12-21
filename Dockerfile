@@ -20,7 +20,7 @@ RUN curl -k -LSs --output /tmp/prometheus.tar.gz \
     mv /tmp/promtool /bin/ && \
     mv /tmp/consoles /usr/share/prometheus/consoles && \
     mv /tmp/console_libraries /usr/share/prometheus/console_libraries && \
-    mkdir -p /prometheus && \
+    mkdir -p /prometheus/ecs && \
     chmod 0755 /bin/entrypoint.sh && \
     chown -R nobody:nogroup /etc/prometheus /prometheus
 
