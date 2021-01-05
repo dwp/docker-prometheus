@@ -48,6 +48,10 @@ fi
 echo "INFO: Copying prometheus configuration file(s) from ${S3_URI} to /etc/prometheus..."
 aws ${PROFILE_OPTION} s3 sync ${S3_URI}/ /etc/prometheus/
 
+if [ !"${LOG_LEVEL}" ]; then
+  LOG_LEVEL="info"
+fi
+
 echo "INFO: Starting prometheus..."
 exec /bin/prometheus \
   --config.file=/etc/prometheus/prometheus-${PROMETHEUS_ROLE}.yml \
@@ -56,4 +60,5 @@ exec /bin/prometheus \
   --web.console.templates=/usr/share/prometheus/consoles \
   --web.enable-lifecycle \
   --storage.tsdb.min-block-duration=2h \
-  --storage.tsdb.max-block-duration=2h
+  --storage.tsdb.max-block-duration=2h \
+  --log.level=${LOG_LEVEL}
