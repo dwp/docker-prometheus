@@ -66,5 +66,3 @@ exec /bin/prometheus \
 --storage.tsdb.min-block-duration=2h \
 --storage.tsdb.max-block-duration=2h \
 --log.level=${LOG_LEVEL} && \
-
-aws ${PROFILE_OPTION} s3 sync ${S3_URI}/ /etc/prometheus/
