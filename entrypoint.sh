@@ -44,7 +44,8 @@ EOF
 else
     echo "INFO: Using attached IAM roles/instance profiles to authenticate with S3 as no AWS_ACCESS_KEY_ID or AWS_SECRET_ACCESS_KEY have been provided"
 fi
-
+sleep 10
+ls /etc/prometheus
 if [ -f "/etc/prometheus/prometheus-${PROMETHEUS_ROLE}.yml" ]; then
     echo "Config mounted as Volume from S3"
 else
