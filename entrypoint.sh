@@ -65,4 +65,4 @@ exec /bin/prometheus \
 --web.enable-lifecycle \
 --storage.tsdb.min-block-duration=2h \
 --storage.tsdb.max-block-duration=2h \
---log.level=${LOG_LEVEL} && \
+--log.level=${LOG_LEVEL}
