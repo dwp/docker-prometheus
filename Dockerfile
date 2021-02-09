@@ -1,6 +1,6 @@
 FROM alpine:3.12.0
 
-ARG PROMETHEUS_VERSION=2.23.0
+ARG PROMETHEUS_VERSION=2.24.1
 
 # Dependencies
 RUN apk add --update --no-cache \
