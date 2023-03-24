@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.15
 
 ARG PROMETHEUS_VERSION=2.27.1
 
