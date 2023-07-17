@@ -66,4 +66,5 @@ exec /bin/prometheus \
 --storage.tsdb.min-block-duration=2h \
 --storage.tsdb.max-block-duration=2h \
 --storage.tsdb.retention.time=3d \
---log.level=${LOG_LEVEL}
+--log.level=${LOG_LEVEL} \
+${PROMETHEUS_FLAGS}
