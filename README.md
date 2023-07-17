@@ -13,7 +13,8 @@ fetched from S3 and Prometheus is started.
 | AWS_ACCESS_KEY_ID          | AWS access key                           |
 | AWS_SECRET_ACCESS_KEY      | AWS secret access key |
 
+# Optional Environment Variables
 
-
-
-
+| Key               | Description                                                                                                                 |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| PROMETHEUS_FLAGS  | Pass additional flags to prometheus. [refer to docs](https://prometheus.io/docs/prometheus/latest/command-line/prometheus/) |
