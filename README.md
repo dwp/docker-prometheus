@@ -1,3 +1,5 @@
+# DO NOT USE THIS REPO - MIGRATED TO GITLAB
+
 # docker-prometheus
 This repository contains code to create an image that runs Prometheus to be used within AWS.
 A version of Prometheus is downloaded based on the PROMETHEUS_VERSION arg within the Dockerfile. Prometheus configuration files are then
